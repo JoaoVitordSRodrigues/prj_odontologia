@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.letter-spacing {
+    letter-spacing: 0.25rem; /* Equivalente a 4 pixels */
+}
+
+.imagem_logo{
+    width: 150px;
+    height: 110px;
+}
