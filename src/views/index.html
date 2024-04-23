@@ -3,13 +3,13 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Menu Responsivo</title>
+      <title>ODONTO PREMIUM</title>
       <link rel="stylesheet" href="../static/output.css">
   </head>
   <body class="flex flex-col min-h-screen bg-gray-100">
     <header class="align-items-center mb-8 ">
       <nav class="flex justify-between bg-blue-300 text-white items-center">
-        <a href="/dashboard" class="font-bold px-3 py-2 letter-spacing"><img src="../static/imgs/LOGO__ODONTOLOGIA-removebg-preview.png" class="imagem_logo"></a>
+        <a href="index.html" class="font-bold px-3 py-2 letter-spacing"><img src="../static/imgs/LOGO__ODONTOLOGIA.png" class="imagem_logo"></a>
         <a href="login.html" class="font-bold px-3 py-2 letter-spacing">Login</a>
       </nav>
     </header>
@@ -17,70 +17,47 @@
     <main class="flex-grow mt-8 mb-8">
       <div class="container mx-auto">
         <div class="flex flex-wrap justify-center gap-5">
+          
           <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div class="md:flex">
               <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="img.jpg" alt="Modern building architecture">
+                <img id="imagem-clareamento" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
               </div>
               <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Nome do serviço</div>
+                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Clareamento</div>
                 <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
-                <p class="mt-2 text-slate-500">Texto sobre</p>
+                <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
+                </p>
               </div>
             </div>
           </div>
+
+          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="md:flex">
+              <div class="md:shrink-0">
+                <img id="imagem-clareamento" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/Odontologia Estética.jpeg" alt="Modern building architecture">
+              </div>
+              <div class="p-8">
+                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Clareamento</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
+                <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
+                </p>
+              </div>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              var imagemClareamento = document.getElementById("imagem-clareamento");
+              var cardClareamento = imagemClareamento.closest(".max-w-md");
+            
+              imagemClareamento.addEventListener("click", function() {
+                cardClareamento.classList.toggle("expanded");
+              });
+            });
+            </script>
+          
     
-          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-            <div class="md:flex">
-              <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="img.jpg" alt="Modern building architecture">
-              </div>
-              <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Nome do serviço</div>
-                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
-                <p class="mt-2 text-slate-500">Texto sobre</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-            <div class="md:flex">
-              <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="img.jpg" alt="Modern building architecture">
-              </div>
-              <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Nome do serviço</div>
-                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
-                <p class="mt-2 text-slate-500">Texto sobre</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-            <div class="md:flex">
-              <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="img.jpg" alt="Modern building architecture">
-              </div>
-              <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Nome do serviço</div>
-                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
-                <p class="mt-2 text-slate-500">Texto sobre</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-            <div class="md:flex">
-              <div class="md:shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="img.jpg" alt="Modern building architecture">
-              </div>
-              <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Nome do serviço</div>
-                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
-                <p class="mt-2 text-slate-500">Texto sobre</p>
-              </div>
-            </div>
-          </div>
+          
 
           
 

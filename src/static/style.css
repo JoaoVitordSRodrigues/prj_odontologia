@@ -10,3 +10,19 @@
     width: 150px;
     height: 110px;
 }
+
+.expanded {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: fixed;
+    left: 50%; /* Define a margem esquerda como 50% da largura da tela */
+    top: 50%; /* Mantém o elemento centralizado verticalmente */
+    transform: translate(-50%, -50%); /* Move o elemento de volta em 50% da sua própria largura e altura, centrando-o completamente */
+    width: 80vw;
+    height: 80vh;
+    z-index: 9999;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: 0.3s ease-in-out; /* Transição de opacidade */
+}
