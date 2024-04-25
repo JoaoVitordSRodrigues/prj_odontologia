@@ -8,8 +8,8 @@
   </head>
   <body class="flex flex-col min-h-screen bg-gray-100">
     <header class="align-items-center mb-8 ">
-      <nav class="flex justify-between bg-blue-300 text-white items-center">
-        <a href="index.html" class="font-bold px-3 py-2 letter-spacing"><img src="../static/imgs/LOGO__ODONTOLOGIA.png" class="imagem_logo"></a>
+      <nav class="flex justify-between cor_principal text-white items-center">
+        <a href="index.html" class="font-bold px-3 py-2 letter-spacing"><img src="../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>
         <a href="login.html" class="font-bold px-3 py-2 letter-spacing">Login</a>
       </nav>
     </header>
@@ -21,36 +21,70 @@
           <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div class="md:flex">
               <div class="md:shrink-0">
-                <img id="imagem-clareamento" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
+                <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
               </div>
-              <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Clareamento</div>
-                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Informações</a>
+              <div class="p-8 max-w-96">
+                <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">Clareamento</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>
                 <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
                 </p>
               </div>
             </div>
           </div>
+
+          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="md:flex">
+              <div class="md:shrink-0">
+                <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
+              </div>
+              <div class="p-8 max-w-96">
+                <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">Clareamento</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>
+                <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="md:flex">
+              <div class="md:shrink-0">
+                <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
+              </div>
+              <div class="p-8 max-w-96">
+                <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">Clareamento</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>
+                <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          
         
           <script>
             document.addEventListener("DOMContentLoaded", function() {
-              var imagemClareamento = document.getElementById("imagem-clareamento");
-              var cardClareamento = imagemClareamento.closest(".max-w-md");
-            
-              imagemClareamento.addEventListener("click", function() {
-                cardClareamento.classList.toggle("expanded");
+              var imagensClareamento = document.querySelectorAll(".imagem-servico");
+          
+              imagensClareamento.forEach(function(imagemClareamento) {
+                imagemClareamento.addEventListener("click", function() {
+                  var cardClareamento = imagemClareamento.parentNode; // Pegar o pai da imagem
+                  cardClareamento.classList.toggle("expanded");
+                });
               });
             });
-            </script>
+          </script>
+          
           
 
         </div>
       </div>
     </main>
 
-    <footer class="bg-blue-300 text-white text-center py-4">
-      <div class="flex gap-3 items-center">
-        <img src="img.jpg" alt="logo" class="w-36">
+    <footer class="cor_principal text-white text-center py-4">
+      <div class="flex gap-3 items-center ml-3">
+        <img src="../static/imgs/LOGO_ODONTOLOGIA_Branco.png" alt="logo" class="w-36">
         <p>Direitos autorais</p>
       </div>
     </footer>
