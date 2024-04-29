@@ -1,74 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>ODONTO PREMIUM</title>
-      <link rel="stylesheet" href="../static/output.css">
-  </head>
-  <body class="flex flex-col min-h-screen bg-gray-100">
-    <header class="align-items-center mb-8 ">
-      <nav class="flex justify-between bg_principal text-white items-center">
-        <a href="index.html" class="font-bold px-3 py-2 letter-spacing"><img src="../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>
-        <a href="login.html" class="font-bold px-3 py-2 letter-spacing"><i class="fi fi-rr-user">--></i></a>
-      </nav>
-    </header>
+<main>
+  <div class="container mx-auto">
+    <div class="flex flex-wrap justify-center gap-5">
       
-    <main class="flex-grow mt-8 mb-8">
-      <div class="container mx-auto">
-        <div class="flex flex-wrap justify-center gap-5">
-          
-          {{#each post}}
-            {{#dataValues}}
-              <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-                <div class="md:flex">
-                  <div class="md:shrink-0">
-                    <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
-                  </div>
-                  <div class="p-8 max-w-96">
-                    <div class="flex justify-end gap-10">
-                      <button href="" class="bg_principal p-2 rounded-md text-white">Editar</button>
-                      <button href="" class="bg-red-500 p-2 rounded-md text-white">Excluir</button>
-                    </div>
-                    <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">{{nome}}</div>
-                    <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>
-                    <p class="mt-2 text-slate-500 text-justify">
-                      {{informacoes}}
-                    </p>
-                  </div>
-                </div>
+      {{#each post}}
+        {{#dataValues}}
+          <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="md:flex">
+              <div class="md:shrink-0">
+                <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
               </div>
-            {{/dataValues}}
-          {{/each}}
-            
+              <div class="p-8 max-w-96">
+                <div class="flex justify-end gap-10">
+                  <button href="" class="bg_principal p-2 rounded-md text-white">Editar</button>
+                  <button href="" class="bg-red-500 p-2 rounded-md text-white">Excluir</button>
+                </div>
+                <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">Clareamento</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>
+                <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
+                </p>
+              </div>
+            </div>
+          </div>
+        {{/dataValues}}
+      {{/each}}
+        
+   </div>
+  </div>
+</main>
 
-          <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              var imagensClareamento = document.querySelectorAll(".imagem-servico");
-          
-              imagensClareamento.forEach(function(imagemClareamento) {
-                imagemClareamento.addEventListener("click", function() {
-                  var cardClareamento = imagemClareamento.parentNode; // Pegar o pai da imagem
-                  cardClareamento.classList.toggle("expanded");
-                });
-              });
-            });
-          </script>
-          
-          
-
-        </div>
-      </div>
-    </main>
-
-    <footer class="bg_principal text-white text-center py-4">
-      <div class="flex gap-3 items-center ml-3">
-        <img src="../static/imgs/LOGO_ODONTOLOGIA_Branco.png" alt="logo" class="w-36">
-        <p>Direitos autorais</p>
-      </div>
-    </footer>
-  </body>
-</html>
-
-
-<!---->
+    

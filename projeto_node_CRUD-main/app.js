@@ -10,15 +10,10 @@ app.set("view engine", "handlebars")
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.use(express.static(__dirname))
-
+app.use(express.static("static"))
 
 app.get("/", function(req, res){
-    post.Servicos.findAll().then(function(post){
-        res.render("index", {post}) 
-    }).catch(function(erro){
-        console.log("Erro ao carregar dados do banco: " + erro)
-    })
+    res.render("index")
 })
 
 app.get("/login", function(req, res){
@@ -28,6 +23,8 @@ app.get("/login", function(req, res){
 app.get("/admin", function(req, res){
     post.Servicos.findAll().then(function(post){
         res.render("admin", {post})
+    }).catch(function(erro){
+        console.log("Erro ao carregar dados do banco: " + erro)
     })
 })
 
