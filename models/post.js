@@ -21,7 +21,7 @@ const Admin = db.sequelize.define('admin',{
     }
 })
 
-//Servicos.sync({force:true});
-//Admin.sync({force:true});
+Servicos.sync();
+Admin.sync();
 
 module.exports = {Servicos, Admin};

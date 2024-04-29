@@ -11,16 +11,16 @@
               </div>
               <div class="p-8 max-w-96">
                 <div class="flex justify-end gap-10">
-                  <button href="" class="bg_principal p-2 rounded-md text-white">Editar</button>
-                  <button href="" class="bg-red-500 p-2 rounded-md text-white">Excluir</button>
+                  <button  class="bg_principal p-2 rounded-md text-white"><a href="/editar/{{id}}">Editar</a></button>
+                  <button href="/excluir/{{id}}" class="bg-red-500 p-2 rounded-md text-white">Excluir</button>
                 </div>
-                <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">Clareamento</div>
+                <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">{{nome}}</div>
                 <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>
-                <p class="mt-2 text-slate-500 text-justify">O clareamento dental é um tratamento estético que visa branquear os dentes, removendo manchas e pigmentações causadas por alimentos, bebidas ou hábitos como o tabagismo. Pode ser realizado no consultório ou em casa, com supervisão profissional.
-                </p>
+                <p class="mt-2 text-slate-500 text-justify">{{informacoes}}</p>  
               </div>
             </div>
           </div>
+          
         {{/dataValues}}
       {{/each}}
         
