@@ -2,23 +2,23 @@
   <div class="container mx-auto">
     <div class="flex flex-wrap justify-center gap-5">
       
-      <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <div class="flex justify-center items-center text-center "><!--md:flex-->
-          <div class="p-10">
+      <div class="flex justify-center items-center text-center">
+        <div class="row-auto"><!--md:flex-->
+          <div class="p-9 justify-center items-center ">
             <a href="/cadastroServico">
-              <img id="imagem-servico" class="h-40 w-full object-cover md:h-full md:w-32" src="../static/imgs/logo_criar.png" alt="Modern building architecture">
-              <p class="cor_fontPrincipal">Criar novo serviço</p>
+              <img id="imagem-servico" class="" src="../static/imgs/logo_criar.png" alt="Modern building architecture">
             </a>
           </div>
         </div>
       </div>
+      
 
       {{#each post}}
         {{#dataValues}}
           <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div class="md:flex">
               <div class="md:shrink-0">
-                <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
+                <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="/static/imgs/imgs_bnc/{{imagem}}" alt="Modern building architecture">
               </div>
               <div class="p-8 max-w-96">
                 <div class="flex justify-end gap-10 mb-5">

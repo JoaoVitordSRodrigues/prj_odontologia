@@ -1,5 +1,11 @@
 const express = require("express")
+//Importar módulo express-fileupload
+const fileupload = require('express-fileupload');
 const app = express()
+//Habilitando o upload de arquivps
+app.use(fileupload());
+//Referenciar pasta de imagens
+app.use('/static/imgs/imgs_bnc', express.static('./static/imgs/imgs_bnc'));
 const handlebars = require("express-handlebars").engine
 const bodyParser = require("body-parser")
 const post = require("./models/post")
@@ -11,6 +17,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.use(express.static(__dirname))
+
+
 
 
 app.get("/", function(req, res){
@@ -69,13 +77,16 @@ app.get("/cadastroServico", function(req, res){
 app.post("/cadastrarNovoServico", function(req, res){
     post.Servicos.create({
         nome: req.body.nome_servico,
-        informacoes: req.body.informacoes
+        informacoes: req.body.informacoes,
+        imagem: req.files.imagem.name
     }).then(function(){
         res.redirect("admin")
+        req.files.imagem.mv(__dirname+'/static/imgs/imgs_bnc/'+req.files.imagem.name);
     }).catch(function(erro){
         res.send("Falha ao cadastrar os dados: " + erro)
     })
 })
+
 
 
 app.get("/editar/:id", function(req, res){
