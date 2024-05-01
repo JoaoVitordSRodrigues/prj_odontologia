@@ -2,6 +2,17 @@
   <div class="container mx-auto">
     <div class="flex flex-wrap justify-center gap-5">
       
+      <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div class="flex justify-center items-center text-center "><!--md:flex-->
+          <div class="p-10">
+            <a href="/cadastroServico">
+              <img id="imagem-servico" class="h-40 w-full object-cover md:h-full md:w-32" src="../static/imgs/logo_criar.png" alt="Modern building architecture">
+              <p class="cor_fontPrincipal">Criar novo serviço</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {{#each post}}
         {{#dataValues}}
           <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
@@ -10,9 +21,9 @@
                 <img id="imagem-servico" class="h-48 w-full object-cover md:h-full md:w-48" src="../static/imgs/clareamento.jpg" alt="Modern building architecture">
               </div>
               <div class="p-8 max-w-96">
-                <div class="flex justify-end gap-10">
-                  <button  class="bg_principal p-2 rounded-md text-white"><a href="/editar/{{id}}">Editar</a></button>
-                  <button href="/excluir/{{id}}" class="bg-red-500 p-2 rounded-md text-white">Excluir</button>
+                <div class="flex justify-end gap-10 mb-5">
+                  <button class="bg_principal p-2 rounded-md text-white"><a href="/editar/{{id}}">Editar</a></button>
+                  <button class="bg-red-500 p-2 rounded-md text-white"><a href="/excluir/{{id}}">Excluir</a></button>
                 </div>
                 <div class="uppercase tracking-wide text-sm cor_fontPrincipal font-semibold">{{nome}}</div>
                 <a href="#" class="block mt-1 text-lg leading-tight font-medium cor_fontPrincipal hover:underline">Informações</a>

@@ -6,40 +6,45 @@
         </div>
     
         <div class="sm:mx-auto sm:w-full sm:max-w-sm  p-10 ">
-            <form class="space-y-6 " action="/atualizarServico" method="POST">
-                <div>
-                    <input type="hidden" name="id" class="form-control" id="id" value="{{id}}">
-                    <label for="service_name" class="block text-sm font-medium leading-6 text-gray-900">Nome do serviço</label>
-                    <div class="mt-2">
-                        <input id="service_name" name="service_name" type="text" value="{{nome}}" autocomplete="service_name" required class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                    </div>
-                </div>
-            
-                <div class="bg-gray-300 mb-30 rounded-lg  text-center ">
-                    <input type="file" id="file" accept="image/*" hidden>
-                    <div class="img-area flex flex-col items-center text-center py-4 cor_fontPrincipal" data-img="">
-                        <img src="../static/imgs/icn_ImagemForms.png" class="w-20 py-2" >
-                        <div class="help-text block">
-                            <h3 class="">Upload Image</h3>
-                            <p class="">Image size must be less than <span>2MB</span></p>
+            {{#each post}}
+                {{#dataValues}}
+                    <form class="space-y-6 " action="/atualizarServico" method="POST">
+                        <div>
+                            <input type="hidden" name="id" class="form-control" id="id" value="{{id}}">
+                            <label for="nome_servico" class="block text-sm font-medium leading-6 text-gray-900">Nome do serviço</label>
+                            <div class="mt-2">
+                                <input id="nome_servico" name="nome_servico" type="text" value="{{nome}}" autocomplete="nome_servico" required class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
                         </div>
-                        
-                    </div>
-                    <button class="select-image bg_principal p-2 rounded-md text-white my-4" type="button">Select Image</button>
-                </div>
-        
+                    
+                        <div class="bg-gray-300 mb-30 rounded-lg  text-center ">
+                            <input type="file" id="file" accept="image/*" hidden>
+                            <div class="img-area flex flex-col items-center text-center py-4 cor_fontPrincipal" data-img="">
+                                <img src="../static/imgs/icn_ImagemForms.png" class="w-20 py-2" >
+                                <div class="help-text block">
+                                    <h3 class="">Upload Image</h3>
+                                    <p class="">Image size must be less than <span>2MB</span></p>
+                                </div>
+                                
+                            </div>
+                            <button class="select-image bg_principal p-2 rounded-md text-white my-4" type="button">Select Image</button>
+                        </div>
                 
-                <div>
-                    <label for="info" class="block text-sm font-medium leading-6 text-gray-900">Informações</label>
-                    <div class="mt-2">
-                        <textarea id="info" name="info" rows="3" required class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">{{informacoes}}</textarea>
-                    </div>
-                </div>
-            
-                <div>
-                    <button type="submit" class="flex w-full justify-center rounded-md bg_principal px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-600">Entrar</button>
-                </div>
-            </form>
+                        
+                        <div>
+                            <label for="informacoes" class="block text-sm font-medium leading-6 text-gray-900">informacoesrmações</label>
+                            <div class="mt-2">
+                                <textarea id="informacoes" name="informacoes" rows="3" required class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">{{informacoes}}</textarea>
+                            </div>
+                        </div>
+                    
+                        <div>
+                            <button type="submit" class="flex w-full justify-center rounded-md bg_principal px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-600">Entrar</button>
+                        </div>
+                    </form>
+                {{/dataValues}}
+            {{/each}}
+
         </div>
     
     </div>

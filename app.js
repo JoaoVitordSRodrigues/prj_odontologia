@@ -25,6 +25,35 @@ app.get("/login", function(req, res){
     res.render("login")
 })
 
+app.post("/logar", async function(req, res) {
+    try {
+        const { usuario, senha } = req.body;
+
+        // Encontre o admin com base no username
+        const admin = await post.Admin.findOne({ where: { usuario } });
+
+        if (!admin) {
+            return res.status(404).json({ message: "Usuário não encontrado" });
+        }
+
+        // Verifique a senha
+        if (admin.senha !== senha) {
+            return res.status(401).json({ message: "Senha incorreta" });
+        }
+
+        // Se chegou até aqui, o login foi bem-sucedido
+        // Redirecione o usuário para a página de administração
+        res.redirect("/admin");
+    }  catch (error) {
+        console.error("Erro durante o login:", error);
+        res.status(500).json({ message: "Ocorreu um erro durante o login", error: error.message });
+    }
+    
+});
+
+
+
+
 app.get("/admin", function(req, res){
     post.Servicos.findAll().then(function(post){
         res.render("admin", {post})
@@ -34,6 +63,7 @@ app.get("/admin", function(req, res){
 app.get("/cadastroServico", function(req, res){
     res.render("cadastroServico")
 })
+
 
 
 app.post("/cadastrarNovoServico", function(req, res){
@@ -47,13 +77,6 @@ app.post("/cadastrarNovoServico", function(req, res){
     })
 })
 
-// app.get("/admin", function(req, res){
-//     post.findAll().then(function(post){
-//         res.render("admin", {post})
-//     }).catch(function(erro){
-//         console.log("Erro ao carregar dados do banco: " + erro)
-//     })
-// })
 
 app.get("/editar/:id", function(req, res){
     post.Servicos.findAll({where: {'id': req.params.id}}).then(function(post){
@@ -64,8 +87,8 @@ app.get("/editar/:id", function(req, res){
 })
 
 app.get("/excluir/:id", function(req, res){
-    post.destroy({where: {'id': req.params.id}}).then(function(){
-        res.render("admin")
+    post.Servicos.destroy({where: {'id': req.params.id}}).then(function(){
+        res.redirect("/admin")
     }).catch(function(erro){
         console.log("Erro ao excluir ou encontrar os dados do banco: " + erro)
     })
