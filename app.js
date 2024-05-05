@@ -166,7 +166,8 @@ app.get("/excluir/:id", function(req, res){
 app.post("/atualizarServico", function(req, res){
     post.Servicos.update({
         nome: req.body.nome_servico,
-        informacoes: req.body.informacoes
+        informacoes: req.body.informacoes,
+        imagem: req.files.imagemExistente.name
     },{
         where: {
             id: req.body.id
