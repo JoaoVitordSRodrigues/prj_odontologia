@@ -9,8 +9,20 @@
   <body class="flex flex-col min-h-screen bg-gray-100">
     <header class="align-items-center mb-8 ">
       <nav class="flex justify-between bg_principal text-white items-center">
-        <a href="/" class="font-bold px-3 py-2 letter-spacing"><img src="../../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>
-        <a href="/login" class="font-bold px-3 py-2 letter-spacing"><i class="fi fi-rr-user">--></i></a>
+        
+          {{#if isAuthenticated}}   
+            <a href="/admin" class="font-bold px-3 py-2 letter-spacing"><img src="../../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>        
+            <!-- Renderizar navegação para usuários autenticados -->
+            <a href="/logout" class="font-bold px-3 py-2 letter-spacing">LOGOUT</a>           
+          {{else}}
+          <a href="/" class="font-bold px-3 py-2 letter-spacing"><img src="../../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>        
+            <!-- Renderizar navegação para usuários não autenticados -->
+            <a href="/login" class="font-bold px-3 py-2 letter-spacing">--></i></a>
+          {{/if}}
+
+          <script>
+            console.log(isAuthenticated)
+          </script>
       </nav>
     </header>
     <main class="flex-grow mt-8 mb-8">
