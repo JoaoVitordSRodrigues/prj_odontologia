@@ -783,6 +783,10 @@ select {
   }
 }
 
+.row-auto {
+  grid-row: auto;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -962,6 +966,11 @@ select {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
@@ -992,6 +1001,10 @@ select {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
 }
 
 .px-3 {

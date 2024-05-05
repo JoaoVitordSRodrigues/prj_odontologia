@@ -13,11 +13,11 @@
           {{#if isAuthenticated}}   
             <a href="/admin" class="font-bold px-3 py-2 letter-spacing"><img src="../../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>        
             <!-- Renderizar navegação para usuários autenticados -->
-            <a href="/logout" class="font-bold px-3 py-2 letter-spacing">LOGOUT</a>           
+            <a href="/logout" class="px-3 py-2"><img src="../../static/imgs/icn_logout.png" class="w-10"></a>           
           {{else}}
           <a href="/" class="font-bold px-3 py-2 letter-spacing"><img src="../../static/imgs/LOGO_ODONTOLOGIA_Branco.png" class="imagem_logo"></a>        
             <!-- Renderizar navegação para usuários não autenticados -->
-            <a href="/login" class="font-bold px-3 py-2 letter-spacing">--></i></a>
+            <a href="/login" class="font-bold px-3 py-2 letter-spacing"><img src="../../static/imgs/icn_login.png" class=""></a>
           {{/if}}
 
           <script>
@@ -29,10 +29,10 @@
       {{{body}}}
     </main>
 
-    <footer class="bg_principal text-white text-center py-4">
+    <footer class="bg-gray-900 text-white text-center py-4">
       <div class="flex gap-3 items-center ml-3">
         <img src="../../static/imgs/LOGO_ODONTOLOGIA_Branco.png" alt="logo" class="w-36">
-        <p>Direitos autorais</p>
+        <p>© 2024 ODONTO PREMIUM. Todos os direitos reservados.</p>
       </div>
     </footer>
   </body>

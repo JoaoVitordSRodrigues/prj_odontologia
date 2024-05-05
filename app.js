@@ -163,19 +163,37 @@ app.get("/excluir/:id", function(req, res){
 
 
 
+
 app.post("/atualizarServico", function(req, res){
+    // Verificar se um novo arquivo de imagem foi enviado
+    let novaImagem;
+    if (req.files && req.files.nova_imagem) {
+        novaImagem = req.files.nova_imagem.name;
+        // Mover o arquivo para o diretório correto
+        req.files.nova_imagem.mv(__dirname+'/static/imgs/imgs_bnc/'+novaImagem);
+    } else {
+        // Caso contrário, mantenha a imagem existente
+        novaImagem = req.body.imagem;
+    }
+
     post.Servicos.update({
         nome: req.body.nome_servico,
         informacoes: req.body.informacoes,
-        imagem: req.files.imagemExistente.name
+        imagem: novaImagem
     },{
         where: {
             id: req.body.id
         }
     }).then(function(){
-        res.redirect("/admin")
-    })
-})
+        // Redirecionar após mover o arquivo
+        res.redirect("/admin");
+    }).catch(function(erro){
+        console.error("Erro ao atualizar serviço:", erro);
+        res.status(500).send("Erro ao atualizar serviço");
+    });
+});
+
+
 
 app.listen(8081, function(){
     console.log("Servidor ativo!")
