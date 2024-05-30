@@ -7,4 +7,6 @@ INTEGRANTES:
   - LUCAS
   - PAULO
 
-![Captura de Tela da Tela Inicial](./src//TELA_HOME.PNG)
+![Captura de Tela da Tela Inicial](./src/imgs_preview_site/site_visao_admin.PNG)
+
+![Captura de Tela da Tela Inicial](./src/imgs_preview_site/site_visao_userNormal.PNG)
