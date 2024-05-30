@@ -6,3 +6,5 @@ INTEGRANTES:
   - JOÃO VITOR
   - LUCAS
   - PAULO
+
+![Captura de Tela da Tela Inicial](./src//TELA_HOME.PNG)
