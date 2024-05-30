@@ -15,13 +15,13 @@ VISÃO ADMIN
 
 
 Dependências que precisam ser instaladas para o funcionamento do projeto:
-npm install express –save
-npm install body-parser --save  
-npm install express-handlebars –save
-npm install mysql2 –save
-npm install sequelize --save
-npm install express express-session body-parser handlebars
-npm i express-fileupload
-npm install @tailwindcss/forms
-npm install tailwindcss
+- npm install express –save
+- npm install body-parser --save  
+- npm install express-handlebars –save
+- npm install mysql2 –save
+- npm install sequelize --save
+- npm install express express-session body-parser handlebars
+- npm i express-fileupload
+- npm install @tailwindcss/forms
+- npm install tailwindcss
 
