@@ -1,4 +1,4 @@
-Projeto utilizando nodejs/handlebars/tailwind onde simula um catalogo de uma clínica odontológica (tendo a possibilidade de realizar o CRUD dos serviços)
+Projeto utilizando nodejs/handlebars/tailwind e sequelize, com users com cargos diferentes, onde um tem a possibilidade de adicionar serviços(admin) e outro somente visualizar.
 
 INTEGRANTES:
   - DANILO
